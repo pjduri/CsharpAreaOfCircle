@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello!  Please enter the radius of your circle.");
+﻿Console.WriteLine("Hello!  Please enter the radius of your circle.");
 string input = Console.ReadLine();
 double radius = double.Parse(input);
 double pi = Math.PI;
