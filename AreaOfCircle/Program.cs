@@ -2,8 +2,24 @@
 using AreaOfCircle;
 
 Console.WriteLine("Hello!  Please enter the radius of your circle.");
-string input = Console.ReadLine();
-double radius = double.Parse(input);
+
+double radius;
+do {
+    Console.WriteLine("Radius: ");
+    string input = Console.ReadLine();
+    if (input == "") 
+    {
+        Console.WriteLine("Exiting program...");
+        Environment.Exit(0);
+    }
+    radius = double.Parse(input);
+    if (radius < 0) 
+    {
+        Console.WriteLine("Radius can't be negative, try again.");
+    }
+} while (radius < 0);
+
+
 Circle circle = new(radius);
 
 
