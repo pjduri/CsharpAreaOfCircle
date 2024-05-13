@@ -7,7 +7,7 @@ double radius;
 do {
     Console.WriteLine("Radius: ");
     string input = Console.ReadLine();
-    if (input == "") 
+    if (input == "" || !double.TryParse(input, out double value)) 
     {
         Console.WriteLine("Exiting program...");
         Environment.Exit(0);
