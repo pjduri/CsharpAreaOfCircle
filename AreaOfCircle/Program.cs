@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using AreaOfCircle;
+﻿using AreaOfCircle;
 
 Console.WriteLine("Hello!  Please enter the radius of your circle.");
 
@@ -29,7 +28,7 @@ Console.WriteLine($"and a diameter of {circle.Diameter}mi.");
 
 Console.WriteLine("\nNow let's figure out how much gas you need to get around a circle like that.");
 Console.WriteLine("What is your car's mpg?");
-string? mpgStr = Console.ReadLine();
+string? mpgStr = Console.ReadLine() ?? "28";
 double mpg = double.Parse(mpgStr);
 
 double gallonsToCircumnavigate = circle.Circumference / mpg;
