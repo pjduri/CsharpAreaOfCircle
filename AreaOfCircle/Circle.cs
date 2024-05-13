@@ -2,32 +2,19 @@
 
 public class Circle
 {
-    public double Radius { get; set; }
-    private double area;
-    public double Area
+    public static double Area(double radius)
     {
-        get { return area; }
-        set { area = Math.PI * Math.Pow(Radius, 2); }
-    }
-    private double circumference;
-    public double Circumference 
-    { 
-        get { return circumference; }
-        set { circumference = Math.PI * Radius* 2; }
+        return Math.PI * Math.Pow(radius, 2);
     }
 
-    private double diameter;
-    public double Diameter
+    public static double Circumference(double radius) 
     {
-        get { return diameter; }
-        set { diameter = Radius * 2; }
+        return 2 * Math.PI * radius;
     }
 
-    public Circle(double radius) {
-        Radius = radius;
-        area = Math.PI * Math.Pow(Radius, 2);
-        circumference = 2 * Math.PI * Radius;
-        diameter = 2 * Radius;
+    public static double Diameter(double radius) 
+    {
+        return radius * 2;
     }
 
 }
